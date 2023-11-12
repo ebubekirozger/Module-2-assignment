@@ -1,276 +1,86 @@
-/* i m not sure how can i give a style for every <p> tag. I mean if there are more than one how can i address them in the css link? 
-okay, as i learned right now i just need to give a specific name. thats all like id="odd or even (tek-cift)" OR even you can make the <p> tags as class and you can call them as class=""
-then here is second question:  can i use inline+internal+external style same time??? 
-annnnd as i see right now we can do it brooo
-
-and also there is a child situation ">" 
-any h2 element which is a direct child of a section element i.e any h2 element whose immidiate parent is a section element. 
-
-element with class selector (selector.class)
-child (direct) selector (selector > selector)
-descendent selector (selector selector)
-
-another important point is the style of the tags will be according to the last declaration in the code. For exp. if our first external declaration is in the head section and last one as internal declaration and in the style tag then the target point will be styled according to the last declaration which is the style tag one.
-
-if you couldn t fix it add the end of the one that you want !important 
-p { color: blue !important;}
-
-another attribute if you add Xem the style tag this will make the text X times bigger than usual/
-p {font-size: 2em;}
-
-overflow: auto; (this attitude allows you to scroll down the text in a small box that you can t see all of it due to size of the box.
-(as a tip in real life we do hate it and we prefer the visible one but of course it depends on you and the case.)
-
-and another case was box-sizing: border-box; (which allows you to bring the box the left edge and till the end of the box area occupy)
-
-and and andddddd really an important one: * (universal selector) 
-
-floating elements can produce very flexible layouts. and to resume normal document flow use the `clear` property.
-
-floats dont have vertical margin collapse.. 
-
-if you coohesed the `relative` positioning and even it moves somewhere else according to the values which you gave the original positioning is still the same place and occupied by itself.
-
-relative positioning offsets the element relative to its normal document flow position.
-
-if you want to increase the font size in entire document then use percentage: like: font-size: 120%
-
-@media this value allows you to size the properties when the browser s pixels get bigger or smaller. Based on this you can design it when browser pixels over X number do this or do this..
-for example: 
-@media (min-width: 1200px) {
-    #p1 {
-        width: 80%;}
-        #p2 {
-           width: 150px;
-           height: 150px; 
-        }
-    }
-if you want to make it bigger than the previous line then it should be a div tag. (means should be a child tag)
- To make a link that address to css: <link rel="stylesheet" href="WHATEVER I NAMED THE FILE">*/
-
+* {
+    box-sizing: border-box;
+    
+}
 body{
 
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-color: skyblue;
-    background-position: top;
-    background-size: cover; 
-    
 }
 
-h1{
-    background: linear-gradient(to right, skyblue, skyblue);
-    border-top: dotted;
-    border-bottom: dotted ;
+h1 {
     text-align: center;
-    overflow: visible;
+    margin-top: 75px;
+    background-color: tomato;
 }
-#p1{
-    border-top: dotted;
-    border-bottom: dotted ;
-    color: tomato;
-    font-family: "consolas", sans-serif;
-    font-size: 18px;
-    text-decoration: double;
-    border-style: outset;
-    border-width: 3px;
-    border-color: gold;
-    border-radius: 5px;
-    padding: 4px;
-    border-left: 3px;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;}
+    
 
-}
-#div1{
+.col {
+    width: 100%;
+    padding: 10 20px ;
+    box-sizing: border-box;
 
-    font-size: larger;
-    border-top: dotted;
-    border-bottom: dotted ;
-    background-image: url("ist.png");
-    box-sizing: inherit;
-    border: 20px;
-    padding: 20px;
-    margin-left: auto;
-}
-
-#loli{
-  background-image: url("ist.png");  
-}
-
-
-#live1{
-
-    font-size: larger;
-    border-top: dotted;
-    border-bottom: dotted ;
     
 }
-p{
-    font-size: large;
-    color: gold;
-    border-bottom: dotted ;
-    margin: 10px;
-    
-}
-
-#form{
-    margin: 50px;
+.container {
+    width: 370px;
+    height: 350px;
+    border: 2px solid black;
+    position: relative;
+    text-align: left;
+    font-size: 25px;
+    padding: 25px;
+    background-color: antiquewhite;
+    margin-bottom: 15px;
     
    
-}
-audio{
-   margin: bottom 5px;
-    clear: right;  
-    float: left; 
-}
-
-#helly{
-    clear: right;  
-    float: left; 
-    color: green;
-}
-#dolly{
-    clear: left;  
-    float: left; 
-    color: green;
-
-}
-#benn{
-    clear: right;  
-    border: 2px solid;
-    position: static;
-    top: 80px;
-   right: 0px;
-}
-#elfocan{
-  padding: 2px;
-    border: 3px solid;  
-    transform: matrix(1, 0, 0, -1, 0, 1);
-/* matrix combines the following transform tags
-scaleX()
-skewY()
-scaleY()
-translateX
-translateY()
- */
-
-}
-
-a:link{
-   color: red;
     
 }
-a:visited {
+
+.inner-box {
+    width: 100px;
+    height: 50px;
+    border: 4px solid;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    text-align: center;
+    font-size: 25px;
+    background-color: tomato;
+  
+    
+    
+}
+p {
+    border: 2px solid black;
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
     color: black;
-     
- }
-
-button:hover{
-    background-color: lightcoral;
-      }
-
-button:active{
-        background-color: lightgray;
-    }
-
-li:nth-child(odd){
-    background-color: lightgray;
-}
-li:nth-child(even){
-    background-color: powderblue;
-}
-li:nth-child(3n){
-    background-color: gold;
-}
-
-h1{
-    text-shadow: 0px -5px 5px  yellow, 0px -5px 5px red;
+    text-align: center;
+    margin-top: 15px;
     
 }
-h1:hover{
-    box-shadow: 3px -5px 5px black;
-}
-.fa-envelope{
-    color: blue;
-    clear: right;  
-    float: left; 
-    padding: 2px;
-}
-.fa-instagram{
-    color: red;
-    float: left; 
-    padding: 2px;
-}
-
-h2{
-    color: firebrick;
-   font-size: 30px;
-   background-color: gray;
-
-   /*animation: mySlide;
-   animation-duration: 4s;
-   animation-timing-function: linear;
-   animation-delay: 1s;
-   animation-iteration-count: infinite;
-   animation-play-state: running;
-    */
-
-/* Also there is a short cut for these tags
-animation: duration value, 
-    timing func,
-    delay,
-    iteration count,
-    play state
- 
-    BUT like this:
-    animation: 4s linear 1s infinite running mySlide;
- */
- animation:  3s linear 1s  infinite running myColorChange;
-}
-
-@keyframes mySlide{
-    from{margin-left: 0%;}
-    to{margin-right: 100%;}
-}
-
-@keyframes myRotate{ 
- 100%{transform: rotateZ(360deg)}
-}
-
-@keyframes myOpacity{ 
-    50%{opacity: 0;}
-   }
-
-@keyframes myScale{ 
-    50%{transform: scale(0.5, 0.5);}
-   }
-
-@keyframes myColorChange{ 
-    20%{background-color: orange;}
-    40%{background-color: red;}
-    60%{background-color: purple;}
-    80%{background-color: green;}
-    100%{background-color: skyblue;}
-}
-
-h2:hover{ 
-}
-
-h2:active{ 
-}
-
-@media (min-width: 1200px) {
-    #elfocan {
-        width: 50%;}
-        #benn {
-           width: 50%;;
+@media (min-width: 992px) {
+    .col {
+        width: 33.33%;
         }
+      
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .col {
+        width: 50%;
+        
     }
+    
+}
 
-    @media (min-width: 900px) and (max-width: 1199px) {
-        #elfocan{
-            width: 50%;
-        }
-        #benn {
-            width: 50%;
-        }
-    }
+@media (min-width: 768px) and (max-width: 991px) {
+    .container:nth-child(3){
+width: 100%;
+
+}
+}
